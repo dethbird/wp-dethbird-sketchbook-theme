@@ -12,7 +12,7 @@ Text Domain: wp-dethbird-sketchbook-theme
 */
 
 :root {
-  --wp--preset--color--base: #f7f2ea;
+  --wp--preset--color--base: #e6decd;
   --wp--preset--color--contrast: #171717;
   --wp--preset--color--primary: #7d5837;
   --wp--preset--color--secondary: #d7b98d;
@@ -68,7 +68,7 @@ body {
 }
 
 .explore-panel {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .explore-panel .wp-block-group {
@@ -142,8 +142,12 @@ body {
   margin-right: 0.5rem;
 }
 
+.home-hero-wrap {
+  padding-bottom: 8rem !important;
+}
+
 .home-hero-image {
-  margin: 0 auto;
+  margin: 0 auto 2.5rem;
   text-align: center;
 }
 
@@ -154,6 +158,15 @@ body {
   height: auto;
   margin: 0 auto;
   object-fit: contain;
+}
+
+.home-hero-tagline {
+  margin: 0;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: var(--wp--preset--color--contrast);
 }
 
 @media (max-width: 782px) {
