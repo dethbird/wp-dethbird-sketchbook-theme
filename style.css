@@ -59,6 +59,32 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.post-card,
+.single-post-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.85rem;
+  box-sizing: border-box;
+}
+
+.single-post-card {
+  background: #ffffff;
+  border-radius: 0.9rem;
+}
+
+.post-card .wp-block-post-date {
+  display: block;
+  color: rgba(23, 23, 23, 0.72);
+}
+
+.post-card .wp-block-post-featured-image {
+  margin-bottom: 1rem;
+}
+
+.post-card .wp-block-post-excerpt {
+  color: rgba(23, 23, 23, 0.8);
+  margin-top: 0;
+}
+
 .wp-block-post-excerpt {
   color: rgba(23, 23, 23, 0.8);
 }

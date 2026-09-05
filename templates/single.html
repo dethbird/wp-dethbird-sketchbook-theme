@@ -2,8 +2,12 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
-  <!-- wp:post-title {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","lineHeight":"1.08"}}} /-->
-  <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+  <!-- wp:group {"className":"single-post-card","style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"width":"1px","color":"rgba(23,23,23,0.2)"},"backgroundColor":"#ffffff"},"layout":{"type":"constrained"}} -->
+  <div class="wp-block-group single-post-card" style="border:1px solid rgba(23,23,23,0.2); background-color:#ffffff; padding-top:2rem; padding-right:2rem; padding-bottom:2rem; padding-left:2rem;">
+    <!-- wp:post-title {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","lineHeight":"1.08"},"spacing":{"margin":{"top":"0","bottom":"1.5rem"}}}} /-->
+    <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+  </div>
+  <!-- /wp:group -->
 </main>
 <!-- /wp:group -->
 
