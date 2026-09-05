@@ -1,0 +1,161 @@
+/*
+Theme Name: Dethbird Sketchbook
+Theme URI: https://dethbird.com/
+Author: Dethbird
+Author URI: https://dethbird.com/
+Description: A standalone block theme for the Dethbird sketchbook and editorial content.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+Text Domain: wp-dethbird-sketchbook-theme
+*/
+
+:root {
+  --wp--preset--color--base: #f7f2ea;
+  --wp--preset--color--contrast: #171717;
+  --wp--preset--color--primary: #7d5837;
+  --wp--preset--color--secondary: #d7b98d;
+  --wp--preset--color--tertiary: #efe5d5;
+}
+
+html {
+  background: var(--wp--preset--color--base);
+}
+
+body {
+  background: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.wp-site-blocks {
+  min-height: 100vh;
+}
+
+.wp-block-group,
+.wp-block-query,
+.wp-block-post-template,
+.wp-block-template-part {
+  box-sizing: border-box;
+}
+
+.site-header .wp-block-group,
+.site-footer .wp-block-group {
+  align-items: center;
+}
+
+.wp-block-post-title a,
+.wp-block-post-excerpt a,
+.wp-block-post-featured-image a,
+.wp-block-latest-posts a,
+.wp-block-post-date a,
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wp-block-post-title {
+  margin-bottom: 0.75rem;
+}
+
+.wp-block-post-excerpt {
+  color: rgba(23, 23, 23, 0.8);
+}
+
+.wp-block-separator {
+  opacity: 0.5;
+}
+
+.explore-panel {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.explore-panel .wp-block-group {
+  align-items: center;
+}
+
+.explore-search {
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+
+.explore-search .wp-block-search__label,
+.explore-search .wp-block-search__label:focus-visible {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--wp--preset--color--contrast);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.explore-search .wp-block-search__inside-wrapper {
+  border: 1px solid rgba(23, 23, 23, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  min-height: 3rem;
+}
+
+.explore-search input.wp-block-search__input {
+  background: transparent;
+  border: 0;
+  color: var(--wp--preset--color--contrast);
+  font: inherit;
+  padding: 0.75rem 1rem;
+}
+
+.explore-search input.wp-block-search__input::placeholder {
+  color: rgba(23, 23, 23, 0.7);
+}
+
+.explore-search .wp-block-search__button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base);
+  margin: 0.25rem;
+  padding: 0.7rem 1.1rem;
+  font: inherit;
+}
+
+.explore-tags {
+  flex: 1 1 320px;
+}
+
+.explore-tags a {
+  color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+  opacity: 0.78;
+  transition: opacity 0.15s ease;
+}
+
+.explore-tags a:hover,
+.explore-tags a:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.explore-tags .tag-cloud-link {
+  font-size: 0.9rem !important;
+  line-height: 1.8;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 782px) {
+  .wp-site-blocks {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .explore-panel .wp-block-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .explore-search,
+  .explore-tags {
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
