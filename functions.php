@@ -38,6 +38,15 @@ function wp_dethbird_sketchbook_theme_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'wp_dethbird_sketchbook_theme_enqueue_assets' );
 
+function wp_dethbird_sketchbook_theme_body_classes( $classes ) {
+    if ( is_front_page() && ! is_paged() ) {
+        $classes[] = 'dethbird-landing-page';
+    }
+
+    return $classes;
+}
+add_filter( 'body_class', 'wp_dethbird_sketchbook_theme_body_classes' );
+
 function wp_dethbird_sketchbook_theme_register_home_hero_pattern() {
     $pattern_path = get_theme_file_path( 'patterns/home-hero.php' );
 

@@ -8,12 +8,16 @@
 
   <!-- wp:query {"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"tagName":"div","layout":{"type":"default"}} -->
   <div class="wp-block-query">
-    <!-- wp:post-template -->
-      <!-- wp:post-featured-image {"isLink":true,"sizeSlug":"large","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} /-->
-      <!-- wp:post-title {"isLink":true,"level":2,"style":{"typography":{"fontSize":"clamp(1.75rem, 3vw, 2.5rem)","lineHeight":"1.1"}}} /-->
-      <!-- wp:post-excerpt /-->
-      <!-- wp:post-date {"style":{"typography":{"fontSize":"0.85rem","letterSpacing":"0.08em","textTransform":"uppercase"}}} /-->
-      <!-- wp:spacer {"height":"var:preset|spacing|60"} /-->
+    <!-- wp:post-template {"layout":{"type":"default"}} -->
+      <!-- wp:group {"className":"post-card","style":{"spacing":{"padding":{"top":"1.25rem","right":"1.25rem","bottom":"1.5rem","left":"1.25rem"},"margin":{"bottom":"1.5rem"}},"border":{"width":"1px","color":"rgba(23,23,23,0.25)"},"shadow":"none"},"layout":{"type":"constrained"}} -->
+      <div class="wp-block-group post-card" style="border:1px solid rgba(23,23,23,0.25); padding-top:1.25rem; padding-right:1.25rem; padding-bottom:1.5rem; padding-left:1.25rem; margin-bottom:1.5rem;">
+        <!-- wp:post-date {"style":{"typography":{"fontSize":"0.8rem","letterSpacing":"0.08em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.75rem"}}}} /-->
+        <!-- wp:post-featured-image {"isLink":true,"sizeSlug":"large","style":{"spacing":{"margin":{"bottom":"1rem"}}}} /-->
+        <!-- wp:post-title {"isLink":true,"level":2,"style":{"typography":{"fontSize":"clamp(2rem, 3vw, 3rem)","lineHeight":"1.1"},"spacing":{"margin":{"top":"0","bottom":"0.75rem"}}}} /-->
+        <!-- wp:post-excerpt {"moreText":""} /-->
+        <!-- wp:post-terms {"term":"post_tag","separator":" ","className":"post-card-tags"} /-->
+      </div>
+      <!-- /wp:group -->
     <!-- /wp:post-template -->
   </div>
   <!-- /wp:query -->
