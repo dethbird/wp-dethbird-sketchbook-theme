@@ -69,3 +69,26 @@ function wp_dethbird_sketchbook_theme_register_home_hero_pattern() {
     );
 }
 add_action( 'init', 'wp_dethbird_sketchbook_theme_register_home_hero_pattern' );
+
+function wp_dethbird_sketchbook_theme_register_site_header_pattern() {
+    $pattern_path = get_theme_file_path( 'patterns/site-header.php' );
+
+    if ( ! file_exists( $pattern_path ) ) {
+        return;
+    }
+
+    ob_start();
+    include $pattern_path;
+    $pattern_content = ob_get_clean();
+
+    register_block_pattern(
+        'wp-dethbird-sketchbook-theme/site-header',
+        array(
+            'title'       => __( 'Site Header', 'wp-dethbird-sketchbook-theme' ),
+            'description' => __( 'Header with Dethbird home image and right-aligned navigation.', 'wp-dethbird-sketchbook-theme' ),
+            'categories'  => array( 'header' ),
+            'content'     => $pattern_content,
+        )
+    );
+}
+add_action( 'init', 'wp_dethbird_sketchbook_theme_register_site_header_pattern' );

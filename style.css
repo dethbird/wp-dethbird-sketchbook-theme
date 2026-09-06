@@ -55,6 +55,37 @@ body {
   text-decoration: none;
 }
 
+.site-home-link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: 0.35rem;
+  transition: opacity 0.18s ease;
+}
+
+.site-home-link img {
+  display: block;
+  width: clamp(120px, 14vw, 160px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-home-link:hover {
+  opacity: 0.86;
+}
+
+.site-home-link:focus-visible {
+  outline: 3px solid var(--wp--preset--color--contrast);
+  outline-offset: 4px;
+  opacity: 1;
+}
+
+.site-home-link:focus {
+  outline: 3px solid var(--wp--preset--color--contrast);
+  outline-offset: 4px;
+  opacity: 1;
+}
+
 .wp-block-post-title {
   margin-bottom: 0.75rem;
 }
@@ -260,6 +291,10 @@ body:not(.dethbird-landing-page) .home-hero-wrap {
   .wp-site-blocks {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .site-home-link img {
+    width: clamp(112px, 36vw, 140px);
   }
 
   .explore-panel .wp-block-group {
