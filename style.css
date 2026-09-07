@@ -26,7 +26,7 @@ html {
 body {
   background: var(--wp--preset--color--base);
   color: var(--wp--preset--color--contrast);
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--wp--preset--font-family--barlow-semi-condensed);
 }
 
 .wp-site-blocks {
@@ -88,6 +88,34 @@ body {
 
 .wp-block-post-title {
   margin-bottom: 0.75rem;
+  font-family: var(--wp--preset--font-family--averia-serif-libre);
+}
+
+.wp-block-navigation,
+.wp-block-post-date,
+.wp-block-post-terms,
+.wp-block-query-pagination,
+.post-card-tags,
+.wp-block-search,
+button,
+input,
+select,
+textarea,
+figcaption {
+  font-family: var(--wp--preset--font-family--barlow-semi-condensed);
+  font-weight: 500;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: monospace;
 }
 
 .wp-block-query-pagination {
