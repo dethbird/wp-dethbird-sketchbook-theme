@@ -120,6 +120,46 @@ body {
   text-transform: uppercase;
 }
 
+.single-post-nav {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(23, 23, 23, 0.2);
+  width: 100%;
+}
+
+.single-post-nav .wp-block-post-navigation-link {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.single-post-nav-prev {
+  margin-right: auto;
+  text-align: left;
+}
+
+.single-post-nav-next {
+  margin-left: auto;
+  text-align: right;
+}
+
+.single-post-card > .wp-block-post-navigation-link {
+  display: inline-flex;
+  width: calc(50% - 0.5rem);
+  vertical-align: top;
+}
+
+.single-post-card > .wp-block-post-navigation-link.previous {
+  margin-right: 1rem;
+}
+
+.single-post-card > .wp-block-post-navigation-link.next {
+  margin-left: 0;
+  justify-content: flex-end;
+  text-align: right;
+}
+
 .wp-block-query-pagination a:hover,
 .wp-block-query-pagination a:focus-visible {
   text-decoration: underline;
@@ -306,5 +346,28 @@ body:not(.dethbird-landing-page) .home-hero-wrap {
   .explore-tags {
     width: 100%;
     flex-basis: 100%;
+  }
+
+  .single-post-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .single-post-nav-prev,
+  .single-post-nav-next {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .single-post-card > .wp-block-post-navigation-link {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .single-post-card > .wp-block-post-navigation-link.next {
+    justify-content: flex-start;
+    text-align: left;
   }
 }

@@ -7,8 +7,12 @@
     <!-- wp:post-title {"level":1,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","lineHeight":"1.08"},"spacing":{"margin":{"top":"0","bottom":"1.5rem"}}}} /-->
     <!-- wp:post-content {"layout":{"type":"constrained"}} /-->
     <!-- wp:post-terms {"term":"post_tag","separator":" ","className":"post-card-tags"} /-->
-    <!-- wp:post-navigation-link {"type":"previous","label":"Previous post"} /-->
-    <!-- wp:post-navigation-link {"type":"next","label":"Next post"} /-->
+    <!-- wp:group {"className":"single-post-nav","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap"}} -->
+    <div class="wp-block-group single-post-nav">
+      <!-- wp:post-navigation-link {"type":"previous","label":"Previous post","className":"single-post-nav-prev"} /-->
+      <!-- wp:post-navigation-link {"type":"next","label":"Next post","className":"single-post-nav-next"} /-->
+    </div>
+    <!-- /wp:group -->
   </div>
   <!-- /wp:group -->
 </main>
