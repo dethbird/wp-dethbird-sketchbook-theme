@@ -30,11 +30,11 @@ body {
   position: relative;
   --site-content-max: var(--wp--style--global--content-size, 840px);
   --site-home-art-top: 0.7rem;
-  --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 2rem))) / 2 + 0.35rem);
-  --site-home-art-width: clamp(200px, 60vw, 320px);
-  --site-home-art-height: clamp(130px, 43vw, 220px);
-  --site-home-link-width: clamp(110px, 30vw, 180px);
-  --site-home-link-height: clamp(40px, 12vw, 70px);
+  --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 2rem))) / 2 - 6px);
+  --site-home-art-width: clamp(190px, 56vw, 300px);
+  --site-home-art-height: clamp(124px, 40vw, 208px);
+  --site-home-link-width: clamp(108px, 28vw, 170px);
+  --site-home-link-height: clamp(38px, 11vw, 66px);
 }
 
 body::before {
@@ -116,11 +116,11 @@ body::before {
 @media (min-width: 768px) {
   body {
     --site-home-art-top: 0.85rem;
-    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 3rem))) / 2 + 0.5rem);
-    --site-home-art-width: clamp(250px, 34vw, 390px);
-    --site-home-art-height: clamp(160px, 24vw, 250px);
-    --site-home-link-width: clamp(140px, 15vw, 220px);
-    --site-home-link-height: clamp(50px, 6vw, 86px);
+    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 2rem))) / 2 - 8px);
+    --site-home-art-width: clamp(230px, 30vw, 340px);
+    --site-home-art-height: clamp(150px, 21vw, 220px);
+    --site-home-link-width: clamp(132px, 13vw, 195px);
+    --site-home-link-height: clamp(48px, 5.4vw, 78px);
   }
 
   .site-header > .wp-block-group {
@@ -131,11 +131,11 @@ body::before {
 @media (min-width: 1200px) {
   body {
     --site-home-art-top: 1rem;
-    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 4rem))) / 2 + 0.55rem);
-    --site-home-art-width: clamp(290px, 28vw, 450px);
-    --site-home-art-height: clamp(180px, 19vw, 280px);
-    --site-home-link-width: clamp(160px, 13vw, 230px);
-    --site-home-link-height: clamp(58px, 5vw, 92px);
+    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 2rem))) / 2 - 12px);
+    --site-home-art-width: clamp(245px, 20vw, 330px);
+    --site-home-art-height: clamp(156px, 14vw, 210px);
+    --site-home-link-width: clamp(138px, 10vw, 188px);
+    --site-home-link-height: clamp(50px, 4.1vw, 76px);
   }
 }
 
@@ -426,10 +426,6 @@ body:not(.dethbird-landing-page) .home-hero-wrap {
   .wp-site-blocks {
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .site-home-link img {
-    width: clamp(112px, 36vw, 140px);
   }
 
   .explore-panel .wp-block-group {
