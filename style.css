@@ -27,10 +27,35 @@ body {
   background: var(--wp--preset--color--base);
   color: var(--wp--preset--color--contrast);
   font-family: var(--wp--preset--font-family--barlow-semi-condensed);
+  position: relative;
+  --site-content-max: var(--wp--style--global--content-size, 840px);
+  --site-home-art-top: 0.7rem;
+  --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 2rem))) / 2 + 0.35rem);
+  --site-home-art-width: clamp(200px, 60vw, 320px);
+  --site-home-art-height: clamp(130px, 43vw, 220px);
+  --site-home-link-width: clamp(110px, 30vw, 180px);
+  --site-home-link-height: clamp(40px, 12vw, 70px);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: var(--site-home-art-top);
+  left: var(--site-home-art-left);
+  width: var(--site-home-art-width);
+  height: var(--site-home-art-height);
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("assets/images/dethbird-home.webp");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .wp-site-blocks {
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .wp-block-group,
@@ -45,6 +70,14 @@ body {
   align-items: center;
 }
 
+.site-header > .wp-block-group {
+  padding-top: clamp(2.7rem, 9vw, 4rem) !important;
+}
+
+.site-header .wp-block-navigation {
+  margin-left: auto;
+}
+
 .wp-block-post-title a,
 .wp-block-post-excerpt a,
 .wp-block-post-featured-image a,
@@ -56,22 +89,16 @@ body {
 }
 
 .site-home-link {
-  display: inline-block;
-  line-height: 0;
+  position: fixed;
+  top: var(--site-home-art-top);
+  left: var(--site-home-art-left);
+  width: var(--site-home-link-width);
+  height: var(--site-home-link-height);
+  z-index: 3;
+  display: block;
+  background: transparent;
   border-radius: 0.35rem;
   transition: opacity 0.18s ease;
-}
-
-.site-home-link img {
-  display: block;
-  width: clamp(120px, 14vw, 160px);
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.site-home-link:hover {
-  opacity: 0.86;
 }
 
 .site-home-link:focus-visible {
@@ -84,6 +111,32 @@ body {
   outline: 3px solid var(--wp--preset--color--contrast);
   outline-offset: 4px;
   opacity: 1;
+}
+
+@media (min-width: 768px) {
+  body {
+    --site-home-art-top: 0.85rem;
+    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 3rem))) / 2 + 0.5rem);
+    --site-home-art-width: clamp(250px, 34vw, 390px);
+    --site-home-art-height: clamp(160px, 24vw, 250px);
+    --site-home-link-width: clamp(140px, 15vw, 220px);
+    --site-home-link-height: clamp(50px, 6vw, 86px);
+  }
+
+  .site-header > .wp-block-group {
+    padding-top: clamp(3.4rem, 6vw, 4.9rem) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    --site-home-art-top: 1rem;
+    --site-home-art-left: calc((100vw - min(var(--site-content-max), calc(100vw - 4rem))) / 2 + 0.55rem);
+    --site-home-art-width: clamp(290px, 28vw, 450px);
+    --site-home-art-height: clamp(180px, 19vw, 280px);
+    --site-home-link-width: clamp(160px, 13vw, 230px);
+    --site-home-link-height: clamp(58px, 5vw, 92px);
+  }
 }
 
 .wp-block-post-title {
